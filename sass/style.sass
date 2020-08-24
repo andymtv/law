@@ -1,0 +1,791 @@
+@import 'colors'
+@import 'interface'
+/*Импорт стилей шапки*/
+@import 'blocks/navbar'
+body
+    display: grid
+    grid-template-columns: 1fr
+    justify-items: center
+    background-color: #000
+    padding: 0
+    margin: 0
+.super
+    display: flex
+    flex-direction: column
+    width: 100%
+    min-width: 768px
+    height: 2200px
+.container_header
+    display: flex
+    justify-content: center
+    max-width: 1536px
+    min-width: 768px
+    height: 700px
+    background-image: url(/img/bg_header.png)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center top
+.container
+    display: flex
+    flex-direction: column
+    margin-top: 50px
+    width: 80%
+.navbar
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+.hamburger
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    &:hover
+        .piece
+            margin-top: 4px
+            background-color: #396bdd
+.piece
+    width: 27px
+    height: 2px
+    background-color: #fff
+    margin-top: 2px
+.logo
+    display: flex
+    justify-content: center
+    color: white
+    font-family: 'Merienda', cursive
+    flex-grow: 4
+.name
+    font-size: 32px
+    text-align: center
+.company
+    font-size: 16px
+    margin-left: 5px
+    text-align: center
+.phone
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    color: #fff
+    &:hover
+        color: #396bdd
+        .number
+            color: #396bdd
+.number
+    text-align: right
+    font-size: 18px
+    text-decoration: none
+    font-family: 'Roboto Condensed', sans-serif
+    color: #fff
+    
+.services
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-top: 280px
+    color: white
+    &_title
+        font-size: 57px
+        font-family: 'Roboto Condensed', sans-serif
+        text-transform: uppercase
+        letter-spacing: 7px
+        text-align: center
+    &_names
+        display: flex
+        justify-content: center
+        margin-top: 50px
+    &_block
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-left: 20px
+        padding-right: 20px
+    &_name
+        font-size: 17px
+        text-decoration: none
+        text-transform: uppercase
+        text-align: center
+        color: white
+        letter-spacing: 2px
+        font-family: 'Roboto Condensed', sans-serif
+.line
+    &_first
+        width: 75px
+        visibility: hidden
+    &_second
+        width: 122px
+        visibility: hidden
+    &_third
+        width: 88px
+        visibility: hidden
+    &_fourth
+        width: 43px
+        visibility: hidden
+.block
+    &_first
+        &:hover
+            .services_name
+                color: #396bdd
+            .line_first
+                visibility: visible
+    &_second
+        &:hover
+            .services_name
+                color: #396bdd
+            .line_second
+                visibility: visible
+    &_third
+        &:hover
+            .services_name
+                color: #396bdd
+            .line_third
+                visibility: visible
+    &_fourth
+        &:hover
+            .services_name
+                color: #396bdd
+            .line_fourth
+                visibility: visible
+.arrows
+    display: flex
+    justify-self: center
+    justify-content: center
+    width: 100%
+    height: 200px
+    margin-top: 150px
+    opacity: 0.5
+    &:hover
+        animation: down 1s
+    
+
+@keyframes down
+    0%
+        transform: translateY(0px)
+        opacity: 0.5
+    50%
+        transform: translateY(30px)
+        opacity: 1
+    51%
+        transform: translateY(30px)
+        opacity: 1
+    100%
+        transform: translateY(0px)
+        opacity: 0.5
+    
+.arrow
+    &_one
+        padding: 0
+        margin-right: -4px
+        background-color: #fff
+        width: 35px
+        height: 2px
+        transform: rotate(35deg)
+        
+    &_two
+        padding: 0
+        margin-left: -4px
+        background-color: #fff
+        width: 35px
+        height: 2px
+        transform: rotate(-35deg)
+        
+.container_main
+    display: flex
+    justify-content: center
+    width: 100%
+    height: 900px
+.our_services
+    &_title
+        display: flex
+        justify-content: center
+        margin: 0px 30px 18px 30px
+    &_string
+        font-size: 28px
+        color: #fff
+        opacity: 0.5
+        font-family: 'Roboto Condensed', sans-serif
+        text-transform: uppercase
+        letter-spacing: 3px
+        text-align: center
+    &_names
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: 1fr 1fr
+        margin-top: 65px
+
+.os_block
+    &_first
+        display: flex
+        flex-direction: column
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 1
+        grid-row-end: 3
+        &_head
+            display: flex
+            align-items: center
+            color: #fff
+        &_end
+            display: flex
+            align-items: center
+            color: #fff
+            &:hover
+                .know_more_block
+                    border: 1px solid #396bdd
+                .know_more
+                    color: #396bdd
+    &_second
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        grid-column-start: 2
+        grid-column-end: 3
+        grid-row-start: 1
+        grid-row-end: 3
+        &_head
+            display: flex
+            align-items: center
+            color: #fff
+        &_end
+            display: flex
+            align-items: center
+            color: #fff
+            &:hover
+                .know_more_block
+                    border: 1px solid #396bdd
+                .know_more
+                    color: #396bdd
+    &_third
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        grid-column-start: 3
+        grid-column-end: 3
+        grid-row-start: 1
+        grid-row-end: 3
+        &_one
+            display: flex
+            flex-direction: column
+            padding-bottom: 20px
+            &_head
+                display: flex
+                align-items: center
+                color: #fff
+            &_end
+                display: flex
+                align-items: center
+                color: #fff
+                &:hover
+                    .know_more_block
+                        border: 1px solid #396bdd
+                    .know_more
+                        color: #396bdd
+        &_two
+            display: flex
+            flex-direction: column
+            &_head
+                display: flex
+                align-items: center
+                color: #fff
+            &_end
+                display: flex
+                align-items: center
+                color: #fff
+                &:hover
+                    .know_more_block
+                        border: 1px solid #396bdd
+                    .know_more
+                        color: #396bdd
+.icon_button
+    margin: 5px
+    color: #396bdd
+.first_head_name
+    margin: 5px
+    text-transform: uppercase
+    font-family: 'Roboto Condensed', sans-serif
+    font-size: 21px
+    letter-spacing: 2px
+    font-weight: bold
+.second_head_name
+    margin: 5px
+    text-transform: uppercase
+    font-family: 'Roboto Condensed', sans-serif
+    font-size: 21px
+    letter-spacing: 2px
+    font-weight: bold
+.third_one_head_name
+    margin: 5px
+    text-transform: uppercase
+    font-family: 'Roboto Condensed', sans-serif
+    font-size: 21px
+    letter-spacing: 2px
+    font-weight: bold
+.third_two_head_name
+    margin: 5px
+    text-transform: uppercase
+    font-family: 'Roboto Condensed', sans-serif
+    font-size: 21px
+    letter-spacing: 2px
+    font-weight: bold
+.know_more_block
+    margin: 5px
+    padding: 10px 15px
+    border: 1px solid #fff
+    border-radius: 25px
+    
+    
+.know_more
+    text-decoration: none
+    color: #fff
+    text-transform: uppercase
+    font-family: 'Roboto Condensed', sans-serif
+    font-size: 13px
+    &_f
+        text-decoration: none
+    &_s
+        text-decoration: none
+    &_to
+        text-decoration: none
+    &_tt
+        text-decoration: none
+        
+.first_text
+    margin-left: 40px
+    opacity: 0.43
+    font-family: 'Roboto Condensed', sans-serif
+    letter-spacing: 2px
+    font-size: 15px
+    color: #fff
+.second_text
+    margin-left: 40px
+    opacity: 0.43
+    font-family: 'Roboto Condensed', sans-serif
+    letter-spacing: 2px
+    font-size: 15px
+    color: #fff
+.third_one_text
+    margin-left: 40px
+    opacity: 0.43
+    font-family: 'Roboto Condensed', sans-serif
+    letter-spacing: 2px
+    font-size: 15px
+    color: #fff
+.third_two_text
+    margin-left: 40px
+    opacity: 0.43
+    font-family: 'Roboto Condensed', sans-serif
+    letter-spacing: 2px
+    font-size: 15px
+    color: #fff
+.list
+    &_first
+        list-style-type: circle
+        color: #396bdd
+        list-style-position: 
+        li
+            margin-top: 35px
+        li span
+            color: #d5d5d5
+            font-family: 'Roboto Condensed', sans-serif
+            letter-spacing: 1px
+            font-size: 16px
+            font-weight: bold
+    &_second
+        list-style-type: circle
+        color: #396bdd
+        li
+            margin-top: 35px
+        li span
+            color: #d5d5d5
+            font-family: 'Roboto Condensed', sans-serif
+            letter-spacing: 1px
+            font-size: 16px
+            font-weight: bold
+
+.container_main_second
+    display: flex
+    justify-content: center
+    width: 100%
+    height: 900px
+    box-shadow: inset 0px 5px 10px 5px #000
+    background-image: url(../img/bg_main_22.png), url(../img/bg_main_2.png), linear-gradient(to bottom, rgba(64, 100, 221, 0.14), rgba(64, 100, 221, 0.14))
+    background-repeat: repeat-x, no-repeat, no-repeat
+    background-size: contain, cover, 100% 100%
+    background-position: center bottom, center top, center
+.about_us
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr
+    align-items: stretch
+    margin-top: 65px
+    &_title
+        display: flex
+        justify-content: center
+        margin-bottom: 18px
+        margin-left: 30px
+        margin-right: 30px
+    &_string
+        font-size: 28px
+        color: #fff
+        opacity: 0.75
+        font-family: 'Roboto Condensed', sans-serif
+        text-transform: uppercase
+        letter-spacing: 3px
+        text-align: center
+.au_block
+    &_first
+        display: flex
+        flex-direction: column
+        grid-column-start: 1
+        grid-row-start: 1
+        &_head
+            display: flex
+            align-items: center
+            color: #fff
+    &_second
+        display: flex
+        flex-direction: column
+        grid-column-start: 2
+        grid-row-start: 1
+        &_head
+            display: flex
+            align-items: center
+            color: #fff
+    &_third
+        display: grid
+        grid-template-rows: 10px 250px 25px 1fr
+        grid-column-start: 3
+        grid-row-start: 1
+        justify-items: center
+        &_head
+            display: flex
+            align-items: center
+            color: #fff
+.au_first_head_name
+    text-transform: uppercase
+    font-family: 'Roboto Condensed', sans-serif
+    font-size: 21px
+    letter-spacing: 2px
+    font-weight: bold
+    text-align: center
+.au_second_head_name
+    text-transform: uppercase
+    font-family: 'Roboto Condensed', sans-serif
+    font-size: 21px
+    letter-spacing: 2px
+    font-weight: bold
+    text-align: center
+.au_third_head_name
+    text-transform: uppercase
+    font-family: 'Roboto Condensed', sans-serif
+    font-size: 21px
+    letter-spacing: 2px
+    font-weight: bold
+    text-align: center
+    grid-row-start: 1
+.au_first_text
+    margin-top: 30px
+    opacity: 0.43
+    font-family: 'Roboto Condensed', sans-serif
+    letter-spacing: 2px
+    font-size: 15px
+    color: #fff
+    &_block
+        margin-top: 30px
+.au_second_block
+    display: flex
+    flex-direction: column
+    margin-top: 30px
+    &_element
+        &_1
+            display: flex
+            align-items: center
+        &_2
+            display: flex
+            align-items: center
+        &_3
+            display: flex
+            align-items: center
+.avatar
+    &_1
+        margin-top: 5px
+        height: 100px
+        width: 100px
+        border-radius: 50%
+        background-image: url(../img/p_1.png)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+    &_2
+        margin-top: 5px
+        height: 100px
+        width: 100px
+        border-radius: 50%
+        background-image: url(../img/p_2.png)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+    &_3
+        margin-top: 5px
+        height: 100px
+        width: 100px
+        border-radius: 50%
+        background-image: url(../img/p_3.png)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+.person
+    &_info
+        display: flex
+        flex-direction: column
+        margin-left: 10px
+    &_name
+        font-family: 'Roboto Condensed', sans-serif
+        font-size: 15px
+        color: #fff
+        letter-spacing: 1px
+        font-weight: 600
+    &_text
+        margin-top: 2px
+        margin-bottom: 2px
+        opacity: 0.43
+        font-family: 'Roboto Condensed', sans-serif
+        letter-spacing: 1px
+        font-size: 14px
+        color: #fff
+    &_email
+        margin-top: 3px
+        font-family: 'Roboto Condensed', sans-serif
+        letter-spacing: 1px
+        font-size: 14px
+        text-decoration: none
+        color: #396bdd
+.more_about_line
+    &_first
+        margin-top: 4px
+        height: 1px
+        background-color: #396bdd
+        border-radius: 1px
+        width: 137px
+        visibility: hidden
+    &_second
+        margin-top: 4px
+        height: 1px
+        background-color: #396bdd
+        border-radius: 1px
+        width: 143px
+        visibility: hidden
+    &_third
+        margin-top: 4px
+        height: 1px
+        background-color: #396bdd
+        border-radius: 1px
+        width: 148px
+        visibility: hidden
+.more_about
+    &_mission
+        margin-top: 15px
+        &_text
+            margin-top: 3px
+            font-family: 'Roboto Condensed', sans-serif
+            letter-spacing: 1px
+            font-size: 14px
+            text-decoration: none
+            color: #396bdd
+        &:hover
+            .more_about_mission_text
+                color: #396bdd
+            .more_about_line_first
+                visibility: visible
+    &_team
+        margin-top: 15px
+        &_text
+            margin-top: 3px
+            font-family: 'Roboto Condensed', sans-serif
+            letter-spacing: 1px
+            font-size: 14px
+            text-decoration: none
+            color: #396bdd
+        &:hover
+            .more_about_line_second
+                visibility: visible
+    &_process
+        margin-top: 15px
+        grid-row-start: 5
+        &_text
+            margin-top: 3px
+            font-family: 'Roboto Condensed', sans-serif
+            letter-spacing: 1px
+            font-size: 14px
+            text-decoration: none
+            color: #396bdd
+        &:hover
+            .more_about_line_third
+                visibility: visible
+
+.slideshow-container
+    display: grid
+    align-items: center
+    max-width: 400px
+    position: relative
+    margin: auto
+    grid-row-start: 2
+    margin-top: 30px
+
+.prev, .next
+    cursor: pointer
+    position: absolute
+    top: 50%
+    width: auto
+    margin-top: -22px
+    padding: 5px
+    color: #fff
+    background-color: rgba(0,0,0,0.2)
+    font-weight: bold
+    font-size: 12px
+    transition: 0.6s ease
+    border-radius: 0px 3px 3px 0px
+
+.next
+    right: 0
+    border-radius: 3px 0 0 3px
+
+.prev, .next
+    &:hover
+        background-color: rgba(0,0,0,0.8)
+.dot
+    cursor: pointer
+    height: 7px
+    width: 7px
+    margin: 0 2px
+    border-radius: 50%
+    background-color: #bbb
+    display: inline-block
+    transition: background-color 0.6s ease
+
+.active
+    background-color: #717171
+
+.dot:hover
+    background-color: #717171
+
+.fade
+    -webkit-animation-name: fade
+    -webkit-animation-duration: 1.5s
+    animation-name: fade
+    animation-duration: 1.5s
+
+@-webkit-keyframes fade
+    from{opacity: .4}
+    to{opacity: 1}
+
+@-webkit-keyframes fade
+    from{opacity: .4}
+    to{opacity: 1}
+
+.row:after
+  content: ""
+  display: table
+  clear: both
+
+.column 
+  float: left
+  width: 16.66%
+
+.demo 
+  opacity: 0.6
+
+.active,
+.demo:hover 
+  opacity: 1
+
+.unselectable 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+.container_footer
+    width: 100%
+    height: 50px
+    display: grid
+    grid-template-columns: 1fr
+    justify-items: center
+    align-items: center
+
+.footer-logo
+    width: 100%
+    margin: 10px 0px
+    display: flex
+    justify-content: center
+    color: #fff
+ 
+.footer-name
+    font-size: 18px
+    justify-self: center
+    color: white
+    font-family: 'Merienda', cursive
+    text-align: center
+
+.footer-company
+    font-size: 18px
+    color: white
+    font-family: 'Merienda', cursive
+    margin-left: 5px
+    text-align: center
+
+.year
+    margin-left: 10px
+    color: white
+    font-family: 'Merienda', cursive
+    text-align: center
+
+                             
+@media screen and ( max-width: 768px )
+    .hamburger
+        display: none
+    .logo
+        justify-content: flex-start
+    .arrows
+        margin-top: 50px
+    .container
+        margin-top: 20px
+    .our_services_names
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr 1fr 
+    .list_first
+        display: none
+    .list_second
+        display: none
+    .list_third_one
+        display: none
+    .list_third_two
+        display: none
+    .about_us
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: 1fr 1fr
+    .au_block_first
+        grid-column-start: 1
+        grid-column-end: 3
+        grid-row-start: 1
+        margin: 30px
+    .au_block_second
+        grid-column-start: 3
+        grid-column-end: 4
+        grid-row-start: 1
+        margin: 30px
+    .au_block_third
+        grid-column-start: 1
+        grid-column-end: 4
+        grid-row-start: 2
+        grid-row-end: 2
+        margin: 30px
+    .container_main_second
+        height: 1100px
+    .conatainer_footer
+        justify-content: center
+        
+
+    
